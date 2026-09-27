@@ -10,6 +10,8 @@ Place 'European_Bank.csv' in the same folder as this script, or upload it
 via the sidebar when the app starts.
 """
 
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -31,16 +33,55 @@ def load_data(file):
     return pd.read_csv(file)
 
 
+def find_bank_csv():
+    """
+    Look for the bank CSV next to this script AND in the current working
+    directory (Streamlit Cloud's cwd is not always the repo root), matching
+    the filename case-insensitively so 'european_bank.csv' vs
+    'European_Bank.csv' on a case-sensitive Linux host still resolves.
+    Falls back to the first .csv file found in the repo if no exact-ish
+    name match exists.
+    """
+    search_dirs = [Path(__file__).resolve().parent, Path.cwd()]
+    candidates = []
+    for d in search_dirs:
+        if d.exists():
+            candidates.extend(d.rglob("*.csv"))
+
+    # de-duplicate while preserving order
+    seen = set()
+    unique_candidates = []
+    for c in candidates:
+        if c.resolve() not in seen:
+            seen.add(c.resolve())
+            unique_candidates.append(c)
+
+    for c in unique_candidates:
+        name = c.name.lower()
+        if "european" in name and "bank" in name:
+            return c
+
+    return unique_candidates[0] if unique_candidates else None
+
+
 st.sidebar.title("📊 Retention Dashboard")
 uploaded = st.sidebar.file_uploader("Upload European_Bank.csv", type="csv")
 
 if uploaded is not None:
     df = load_data(uploaded)
-elif __import__("os").path.exists("European_Bank.csv"):
-    df = load_data("European_Bank.csv")
 else:
-    st.warning("Upload 'European_Bank.csv' in the sidebar to begin.")
-    st.stop()
+    auto_path = find_bank_csv()
+    if auto_path is not None:
+        df = load_data(auto_path)
+        st.sidebar.caption(f"Auto-loaded: {auto_path.name}")
+    else:
+        st.warning(
+            "Couldn't find 'European_Bank.csv' in the repo, and none was "
+            "uploaded. Either upload it in the sidebar, or push the CSV "
+            "file into your GitHub repo (same folder as this script) and "
+            "redeploy."
+        )
+        st.stop()
 
 
 # ============================================================

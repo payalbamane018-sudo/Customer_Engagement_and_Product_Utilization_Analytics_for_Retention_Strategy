@@ -151,7 +151,3 @@ streamlit run retention_dashboard.py
 - `IsActiveMember` is a coarse binary proxy for engagement; no transaction- or login-level data was available.
 - Geography- and age-related churn effects are identified but not explained by this dataset.
 - No predictive model or hold-out validation was performed; this is an explanatory/diagnostic study, not a churn-prediction model.
-
-## License
-
-Add a license of your choice (e.g., MIT) before making this repository public, especially if `European_Bank.csv` contains data that is not yours to redistribute.

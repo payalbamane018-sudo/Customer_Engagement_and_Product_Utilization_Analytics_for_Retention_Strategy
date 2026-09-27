@@ -1,0 +1,9 @@
+BalanceTier,IsActiveMember,CustomerCount,ChurnRatePct,AvgSalary
+Zero Balance,0,1744,18.35,99425.39
+Zero Balance,1,1873,9.61,98572.16
+Low Balance,0,1536,32.03,101654.52
+Low Balance,1,1656,16.55,99748.53
+Medium Balance,0,785,31.85,101917.6
+Medium Balance,1,810,19.01,100549.52
+High Balance,0,784,30.61,100861.77
+High Balance,1,812,15.64,99788.04

@@ -1,0 +1,4 @@
+MismatchFlag,CustomerCount,ChurnRatePct,AvgBalance,AvgSalary
+High Balance / Low Salary (Unusual Profile),1163,24.33,148682.04,42678.22
+Aligned,6252,20.67,82258.68,86951.55
+High Salary / Low Balance (Wallet-Share Risk),2585,17.87,30042.72,157696.91

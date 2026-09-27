@@ -1,0 +1,68 @@
+Metric,Value
+Total Rows,10000
+Total Columns,14
+Unique CustomerId,10000
+Duplicate CustomerId Rows,0
+Full Duplicate Rows,0
+Total Missing Values (all columns),0
+HasCrCard - Unique Values,"[0, 1]"
+HasCrCard - Count = 1,7055
+HasCrCard - Count = 0,2945
+IsActiveMember - Unique Values,"[0, 1]"
+IsActiveMember - Count = 1,5151
+IsActiveMember - Count = 0,4849
+Exited - Unique Values,"[0, 1]"
+Exited - Count = 1,2037
+Exited - Count = 0,7963
+NumOfProducts = 1,5084
+NumOfProducts = 2,4590
+NumOfProducts = 3,266
+NumOfProducts = 4,60
+Geography - France,5014
+Geography - Germany,2509
+Geography - Spain,2477
+Gender - Male,5457
+Gender - Female,4543
+CreditScore - count,10000.0
+CreditScore - mean,650.53
+CreditScore - std,96.65
+CreditScore - min,350.0
+CreditScore - 25%,584.0
+CreditScore - 50%,652.0
+CreditScore - 75%,718.0
+CreditScore - max,850.0
+Age - count,10000.0
+Age - mean,38.92
+Age - std,10.49
+Age - min,18.0
+Age - 25%,32.0
+Age - 50%,37.0
+Age - 75%,44.0
+Age - max,92.0
+Tenure - count,10000.0
+Tenure - mean,5.01
+Tenure - std,2.89
+Tenure - min,0.0
+Tenure - 25%,3.0
+Tenure - 50%,5.0
+Tenure - 75%,7.0
+Tenure - max,10.0
+Balance - count,10000.0
+Balance - mean,76485.89
+Balance - std,62397.41
+Balance - min,0.0
+Balance - 25%,0.0
+Balance - 50%,97198.54
+Balance - 75%,127644.24
+Balance - max,250898.09
+EstimatedSalary - count,10000.0
+EstimatedSalary - mean,100090.24
+EstimatedSalary - std,57510.49
+EstimatedSalary - min,11.58
+EstimatedSalary - 25%,51002.11
+EstimatedSalary - 50%,100193.92
+EstimatedSalary - 75%,149388.25
+EstimatedSalary - max,199992.48
+Customers with Balance = 0,3617
+Churn Rate (%),20.37
+Active Member Rate (%),51.51

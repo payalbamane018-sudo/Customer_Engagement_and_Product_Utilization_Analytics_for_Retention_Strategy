@@ -1,0 +1,5 @@
+EngagementProfile,CustomerCount,ChurnRatePct,AvgBalance,AvgProducts,AvgSalary
+Inactive High-Balance,1247,30.47,148857.68,1.38,101338.72
+Inactive Disengaged,3602,25.6,52304.02,1.57,100569.35
+Active Low-Product,2563,18.92,98902.02,1.0,98140.1
+Active Engaged,2588,9.66,53071.26,2.07,100753.15
